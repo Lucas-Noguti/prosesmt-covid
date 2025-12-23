@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# COVID-19 Brasil Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dashboard interativo para visualização de dados sobre COVID-19 no Brasil, utilizando a API pública [COVID-19 Brazil API](https://covid19-brazil-api-docs.vercel.app/).
 
-## Available Scripts
+## 🚀 Tecnologias
 
-In the project directory, you can run:
+- React 18.2.0
+- Bootstrap 5.3.2
+- Axios 1.6.5
+- COVID-19 Brazil API
 
-### `npm start`
+## 📋 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Estados Brasileiros**: Visualiza dados atuais de todos os 27 estados com filtro
+- **Brasil por Data**: Consulta dados históricos desde 25/02/2020
+- **Países**: Lista de países com busca e dados COVID
+- **Formulário**: Cadastro com validação completa e geração de JSON
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Instalação e Execução
 
-### `npm test`
+### Instalação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+### Executar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Acesse:
+[http://localhost:3000](http://localhost:3000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Build para Produção
 
-### `npm run eject`
+```bash
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Estrutura do Projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+├── components/          # Componentes React
+│   ├── BrazilStatesStatus.js
+│   ├── BrazilByDate.js
+│   ├── CountriesStatus.js
+│   └── CovidForm.js
+├── services/           # Serviços de API
+│   └── api.js
+├── constants/          # Constantes
+│   └── brazilianStates.js
+├── utils/             # Utilitários
+│   └── formatters.js
+├── App.js
+├── App.css
+└── index.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+docs/                  # Documentação
+├── PROJETO_README.md
+├── MELHORIAS_APLICADAS.md
+└── CORREÇÕES_FINAIS.md
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎯 Características Técnicas
 
-## Learn More
+- Componentes funcionais com Hooks
+- Otimizações com `useCallback` e `useMemo`
+- Formatação segura de dados (null-safe)
+- Tratamento robusto de erros
+- Design responsivo
+- Acessibilidade (ARIA)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
